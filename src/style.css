@@ -1,0 +1,38 @@
+#calculator-container{
+    background-color: rgb(41, 97, 119);
+    width: fit-content;
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    flex-flow: column;
+    gap: 5px;
+}
+#calculator-display{
+    flex: 1;
+    background-color: rgb(140, 180, 196);
+    padding: 15px 10px;
+    text-align: end;
+    font-size: 30px;
+}
+#btn-container{
+    width: 550px;
+    height: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-items: stretch;
+}
+button{
+    flex-basis: 20%;
+    font-size: 20px;
+}
+.digit-btn,
+.operator-btn,
+.decimal-btn{
+    flex-grow: 1;
+}
+.clear-btn,
+.back-btn{
+    flex-basis: 48%;
+    flex-grow: 4;
+}
