@@ -1,6 +1,6 @@
-let operand1 = 0;
-let operand2 = 0;
-let operator = "+";
+let operand1 = "";
+let operand2 = "";
+let operator = "";
 
 const btnContainer = document.querySelector("#btn-container");
 btnContainer.addEventListener("click", handleClick);
@@ -8,7 +8,7 @@ btnContainer.addEventListener("click", handleClick);
 function handleClick(e){
     switch(e.target.className){
         case "digit-btn":
-            console.log("Digit button");
+            inputDigit(e.target.textContent);
             break;
         case "operator-btn":
             console.log("Operator button");
@@ -27,7 +27,18 @@ function handleClick(e){
             break;
     }
 }
-
+function inputDigit(digit){ 
+    if(checkIfOperatorInputed()){
+        operand2 += digit;
+    }
+    else{
+        operand1 += digit;
+    }
+}
+function checkIfOperatorInputed(){ 
+    if(!operator)return false;
+    else return true;
+}
 function add(a, b){
     return a + b;
 }
