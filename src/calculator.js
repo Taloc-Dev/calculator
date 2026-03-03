@@ -2,6 +2,32 @@ let operand1 = 0;
 let operand2 = 0;
 let operator = "+";
 
+const btnContainer = document.querySelector("#btn-container");
+btnContainer.addEventListener("click", handleClick);
+
+function handleClick(e){
+    switch(e.target.className){
+        case "digit-btn":
+            console.log("Digit button");
+            break;
+        case "operator-btn":
+            console.log("Operator button");
+            break;
+        case "operator-btn":
+            console.log("Operator button");
+            break;
+        case "decimal-btn":
+            console.log("Decimal button");
+            break;
+        case "clear-btn":
+            console.log("Clear button");
+            break;
+        case "back-btn":
+            console.log("Back button");
+            break;
+    }
+}
+
 function add(a, b){
     return a + b;
 }
