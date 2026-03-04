@@ -28,6 +28,7 @@ button{
 }
 .digit-btn,
 .operator-btn,
+.equals-btn,
 .decimal-btn{
     flex-grow: 1;
 }
