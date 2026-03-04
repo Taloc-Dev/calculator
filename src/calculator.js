@@ -57,18 +57,21 @@ function divide(a, b){
 function operate(){
     if(operand2 == false) return;
 
+    const num1 = + operand1;
+    const num2 = + operand2;
+
     switch(operator){
         case "+":
-            add(operand1, operand2);
+            add(num1, num2);
             break;
         case "-":
-            substract(operand1, operand2);
+            substract(num1, num2);
             break;
         case "*":
-            multiply(operand1, operand2);
+            multiply(num1, num2);
             break;
         case "/":
-            divide(operand1, operand2);
+            divide(num1, num2);
             break;
         default:
             break;
