@@ -1,3 +1,8 @@
+#calculator-container,
+#calculator-display{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
 #calculator-container{
     background-color: rgb(41, 97, 119);
     width: fit-content;
@@ -12,7 +17,7 @@
     background-color: rgb(140, 180, 196);
     padding: 15px 10px;
     text-align: end;
-    font-size: 30px;
+    font-size: 35px;
 }
 #btn-container{
     width: 550px;
@@ -25,6 +30,7 @@
 button{
     flex-basis: 20%;
     font-size: 20px;
+    font-weight: bold;
 }
 .digit-btn,
 .operator-btn,
@@ -36,4 +42,12 @@ button{
 .back-btn{
     flex-basis: 48%;
     flex-grow: 4;
+    background-color: rgb(172, 172, 172);
+}
+.operator-btn{
+    background-color: rgb(202, 56, 56);
+    color: white;
+}
+.equals-btn{
+    background-color: rgb(202, 180, 56);
 }
