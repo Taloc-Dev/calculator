@@ -22,10 +22,10 @@ function handleClick(e){
             displayInputs();
             break;
         case "equals-btn":
-            operate();
+            displayResult(operate());
             break;
         case "clear-btn":
-            console.log("Clear button");
+            resetCalculator();
             resetDisplay();
             break;
         case "back-btn":
@@ -43,6 +43,7 @@ function inputDigit(digit){
     }
 }
 function inputOperator(op){
+
     operator = op;
 }
 function checkIfOperatorInputed(){ 
@@ -85,8 +86,11 @@ function operate(){
             break;
     }
 
-    displayResult(result);
+    resetCalculator();
 
+    return result;
+}
+function resetCalculator(){
     operand1 = "";
     operand2 = "";
     operator = "";
