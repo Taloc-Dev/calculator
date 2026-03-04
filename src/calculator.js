@@ -18,7 +18,7 @@ function handleClick(e){
             displayInputs();
             break;
         case "decimal-btn":
-            console.log("Decimal button");
+            inputDecimal();
             displayInputs();
             break;
         case "equals-btn":
@@ -47,6 +47,29 @@ function inputOperator(op){
         operand1 = operate();
     }
     operator = op;
+}
+function inputDecimal(){
+    if(checkIfOperatorInputed()){
+        if(!operand2.split("").includes(".")){
+            if(operand2.length === 0){
+                operand2 = "0.";
+            }
+            else{
+                operand2 += ".";
+            }
+        }
+        else return;
+    }
+    else{
+        if(!operand1.split("").includes(".")){
+            if(operand1.length === 0){
+                operand1 = "0.";
+            }
+            else{
+                operand1 += ".";
+            }
+        }
+    }
 }
 function checkIfOperatorInputed(){ 
     if(!operator) return false;
