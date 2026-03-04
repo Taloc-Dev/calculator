@@ -62,7 +62,7 @@ function operate(){
 
     switch(operator){
         case "+":
-            add(num1, num2);
+            console.log(add(num1, num2));
             break;
         case "-":
             substract(num1, num2);
@@ -76,4 +76,7 @@ function operate(){
         default:
             break;
     }
+    operand1 = "";
+    operand2 = "";
+    operator = "";
 }
