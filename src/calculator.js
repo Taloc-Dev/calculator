@@ -118,7 +118,7 @@ function operate(){
 
     resetCalculator();
 
-    return result;
+    return +parseFloat(result.toFixed(4));
 }
 function resetCalculator(){
     operand1 = "";
