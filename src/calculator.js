@@ -5,25 +5,32 @@ let operator = "";
 const btnContainer = document.querySelector("#btn-container");
 btnContainer.addEventListener("click", handleClick);
 
+const calcDisplay = document.querySelector("#calculator-display")
+
 function handleClick(e){
     switch(e.target.className){
         case "digit-btn":
             inputDigit(e.target.textContent);
+            displayInputs();
             break;
         case "operator-btn":
             inputOperator(e.target.textContent);
+            displayInputs();
             break;
         case "decimal-btn":
             console.log("Decimal button");
+            displayInputs();
             break;
         case "equals-btn":
             operate();
             break;
         case "clear-btn":
             console.log("Clear button");
+            resetDisplay();
             break;
         case "back-btn":
             console.log("Back button");
+            displayInputs();
             break;
     }
 }
@@ -60,23 +67,36 @@ function operate(){
     const num1 = + operand1;
     const num2 = + operand2;
 
+    let result = 0;
     switch(operator){
         case "+":
-            console.log(add(num1, num2));
+            result = add(num1, num2);
             break;
         case "-":
-            substract(num1, num2);
+            result = substract(num1, num2);
             break;
         case "*":
-            multiply(num1, num2);
+            result = multiply(num1, num2);
             break;
         case "/":
-            divide(num1, num2);
+            result = divide(num1, num2);
             break;
         default:
             break;
     }
+
+    displayResult(result);
+
     operand1 = "";
     operand2 = "";
     operator = "";
+}
+function displayInputs(){
+    calcDisplay.textContent = `${operand1} ${operator} ${operand2}`;
+}
+function displayResult(result){
+    calcDisplay.textContent = `${result}`;
+}
+function resetDisplay(){
+    calcDisplay.textContent = `0`;
 }
