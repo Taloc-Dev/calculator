@@ -11,9 +11,6 @@ function handleClick(e){
             inputDigit(e.target.textContent);
             break;
         case "operator-btn":
-            console.log("Operator button");
-            break;
-        case "operator-btn":
             inputOperator(e.target.textContent);
             break;
         case "decimal-btn":
@@ -42,7 +39,7 @@ function inputOperator(op){
     operator = op;
 }
 function checkIfOperatorInputed(){ 
-    if(!operator)return false;
+    if(!operator) return false;
     else return true;
 }
 function add(a, b){
@@ -59,7 +56,7 @@ function divide(a, b){
 }
 function operate(){
     if(operand2 == false) return;
-    
+
     switch(operator){
         case "+":
             add(operand1, operand2);
