@@ -65,7 +65,7 @@ function divide(a, b){
     return a / b;
 }
 function operate(){
-    if(operand2 == false){
+    if(operand2 === ""){
         return operand1;
     } 
 
