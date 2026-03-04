@@ -65,7 +65,9 @@ function divide(a, b){
     return a / b;
 }
 function operate(){
-    if(operand2 == false) return;
+    if(operand2 == false){
+        return operand1;
+    } 
 
     const num1 = + operand1;
     const num2 = + operand2;
