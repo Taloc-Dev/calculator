@@ -143,6 +143,10 @@ function resetCalculator(){
     operator = "";
 }
 function displayInputs(){
+    if(operand1 === "") {
+        resetDisplay(); 
+        return;
+    }
     calcDisplay.textContent = `${operand1} ${operator} ${operand2}`;
 }
 function displayResult(result){
