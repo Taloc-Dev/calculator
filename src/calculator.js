@@ -43,7 +43,9 @@ function inputDigit(digit){
     }
 }
 function inputOperator(op){
-
+    if(operator != false){
+        operand1 = operate();
+    }
     operator = op;
 }
 function checkIfOperatorInputed(){ 
