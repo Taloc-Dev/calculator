@@ -75,10 +75,10 @@ function operate(){
         case "-":
             result = substract(num1, num2);
             break;
-        case "*":
+        case "x":
             result = multiply(num1, num2);
             break;
-        case "/":
+        case "÷":
             result = divide(num1, num2);
             break;
         default:
