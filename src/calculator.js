@@ -29,7 +29,7 @@ function handleClick(e){
             resetDisplay();
             break;
         case "back-btn":
-            console.log("Back button");
+            deleteLastImput();
             displayInputs();
             break;
     }
@@ -70,6 +70,23 @@ function inputDecimal(){
             }
         }
     }
+}
+function deleteLastImput(){
+     if(checkIfOperatorInputed()){
+        if(operand2 === ""){
+            operator = "";
+        }
+        else{
+            let slicedOperand =operand2.slice(0, -1);
+            operand2 = slicedOperand;
+        }
+     }
+     else{
+        if(operand1 !== ""){
+            let slicedOperand = operand1.slice(0, -1);
+            operand1 = slicedOperand;
+        }
+     }
 }
 function checkIfOperatorInputed(){ 
     if(!operator) return false;
