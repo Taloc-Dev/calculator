@@ -19,6 +19,9 @@ function handleClick(e){
         case "decimal-btn":
             console.log("Decimal button");
             break;
+        case "equals-btn":
+            operate();
+            break;
         case "clear-btn":
             console.log("Clear button");
             break;
@@ -55,6 +58,8 @@ function divide(a, b){
     return a / b;
 }
 function operate(){
+    if(operand2 == false) return;
+    
     switch(operator){
         case "+":
             add(operand1, operand2);
