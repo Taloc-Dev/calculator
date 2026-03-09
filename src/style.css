@@ -1,7 +1,27 @@
+footer{
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+body{
+    background-color: rgb(100, 100, 100);
+}
+img{
+    height: 1.4em; 
+    width: auto;
+    transition: all .4s ease-in-out;
+}
+img:hover{
+    transform: rotate(360deg);
+}
 #calculator-container{
     background-color: rgb(41, 97, 119);
     width: fit-content;
-    margin: 0 auto;
+    margin: 5% auto;
     padding: 10px;
     display: flex;
     flex-flow: column;
